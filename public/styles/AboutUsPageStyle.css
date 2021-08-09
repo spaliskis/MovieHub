@@ -1,0 +1,10 @@
+.AboutUsContainer {
+  background-color: rgb(95, 97, 103, 0.3);
+  border-radius: 8px;
+  color: white;
+  border: tomato;
+}
+
+.AboutUsContainer > h1 {
+  color: black;
+}

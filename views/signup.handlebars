@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Create an account</h5>
+          <form class="form-signin" id="signupForm">
+            <div class="form-label-group">
+              <input
+                type="text"
+                id="inputUsername"
+                name="username"
+                class="form-control customFormInputClass"
+                style="border-radius: 0.25rem;"
+                placeholder="Username"
+                required
+                autofocus
+              />
+              <label for="inputUsername">Username</label>
+            </div>
+
+            <div class="form-label-group">
+              <input
+                type="text"
+                id="inputEmail"
+                name="email"
+                class="form-control customFormInputClass"
+                style="border-radius: 0.25rem;"
+                placeholder="Email address"
+                required
+                autofocus
+              />
+              <label for="inputEmail">Email address</label>
+            </div>
+
+            <div class="form-label-group">
+              <input
+                type="password"
+                id="inputPassword"
+                name="password"
+                class="form-control customFormInputClass"
+                style="border-radius: 0.25rem;"
+                placeholder="Password"
+                required
+              />
+              <label for="inputPassword">Password</label>
+            </div>
+
+            <div class="form-label-group">
+              <input
+                type="password"
+                id="Re-enterPassword"
+                class="form-control customFormInputClass"
+                style="border-radius: 0.25rem;"
+                placeholder="Re-enter password"
+                required
+              />
+              <label for="Re-enterPassword">Re-enter password</label>
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="custom-file">
+                <input 
+                name="profile_picture" 
+                type="file" 
+                class="custom-file-input" 
+                id="fileInput" 
+                aria-describedby="fileInput"
+                />
+                <label class="custom-file-label" for="fileInput">Choose file</label>
+                  <label id="fileLabel"></label>
+              </div>
+            </div>
+            
+            <h6 class="text-center text-danger" id="AccountRegistrationError"></h5>
+            <button
+              class="btn btn-lg btn-primary btn-block text-uppercase customFormButton"
+              type="submit"
+              id="registerButton"
+            >
+              Register
+            </button>
+            <div class="hr-or" id="hr-or"></div>
+            <h6 class="text-center text-success" id="AccountSuccessfullyRegisteredMessage"></h5>
+            <button
+              onclick="location.href='signin';"
+              class="btn btn-lg btn-block text-uppercase"
+              type="button"
+            >
+              Sign In
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,246 @@
+<main>
+
+  <div class="container black">
+    <div class="pt-4">
+      <h1 class="title"><strong>{{data.title}}</strong></h1>
+      {{!-- ★★★☆☆ --}}
+      <span class="text-warning"><h3><span style="color: #0c0b00;">{{ratingAvg}}/5 audience score ({{ratingCount}} reviews)</span></h3>
+      </span>
+    </div>
+
+    <div class="row">
+      <article class="col-9">
+        {{#if isImgNull}}
+          <img class="w-100" src="../images/movie_stock.jpg" alt="" />
+        {{else}}
+          <img class="w-100" src="{{images.[0]}}" alt="" />
+        {{/if}}
+      </article>
+      <div class="card col-3 text-light">
+        <div class="card-header">
+          CAST & CREW
+        </div>
+
+        <div class="tab">
+          <button
+            id="defaultOpen"
+            class="btn btn-outline-light custom-button tablinks active"
+            onclick="openTab(event, 'Cast')"
+          >Cast</button>
+          <button
+            class="btn btn-outline-light custom-button tablinks"
+            onclick="openTab(event, 'Crew')"
+          >Crew</button>
+        </div>
+
+        <div id="Cast" class="tabcontent">
+          <ul class="list-group list-group-flush justify-content-center">
+            {{#each actors}}
+                <li class="list-group-item text-left">{{this}}<img
+                src="../images/actorStock.jpg"
+                class="sicon float-right"
+                alt=""
+              />
+              <br /><i>Role</i></li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <div id="Crew" class="tabcontent">
+          <ul class="list-group list-group-flush justify-content-center">
+            <li class="list-group-item text-left">Name Surname<img
+                src="../images/director.jpg"
+                class="sicon float-right"
+                alt=""
+              />
+              <br /><i>Director</i></li>
+            <li class="list-group-item text-left">Name Surname<img
+                src="../images/director.jpg"
+                class="sicon float-right"
+                alt=""
+              />
+              <br /><i>Producer</i></li>
+            <li class="list-group-item text-left">Name Surname<img
+                src="../images/director.jpg"
+                class="sicon float-right"
+                alt=""
+              />
+              <br /><i>Screenwriter</i></li>
+            <li class="list-group-item text-left">Name Surname<img
+                src="../images/director.jpg"
+                class="sicon float-right"
+                alt=""
+              />
+              <br /><i>Designer</i></li>
+            <li class="list-group-item text-left">Name Surname<img
+                src="../images/director.jpg"
+                class="sicon float-right"
+                alt=""
+              />
+              <br /><i>Cinematography</i></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="text-center p-4">
+      <div class="description text-left">
+        <div>
+          <p class="text-left"><strong>Summary: </strong>{{data.description}}</p>
+        </div>
+        <div>
+          <p><strong>Director:</strong> {{data.director}}</p>
+        </div>
+        <div>
+          <p><strong>Categories:</strong> {{data.listed_in}}</p>
+        </div>
+        <div>
+          <p><strong>Country:</strong> {{data.country}}</p>
+        </div>
+        <div>
+          <p><strong>Age rating:</strong> {{data.rating}}</p>
+        </div>
+        <div>
+          <p><strong>Runtime:</strong> {{data.duration}}</p>
+        </div>
+      </div>
+
+      <h2 class="title text-left pt-4"><strong>Trailer</strong></h2>
+      <div class="embed-responsive embed-responsive-16by9 float-right mb-4">
+        <iframe
+          src="https://www.youtube.com/embed/LkG-5sYVQIA"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h2 class="title text-left"><strong>Photos</strong></h2>
+      <!-- Gallery -->
+
+      <div class="gallery">
+        {{#if isImgNull}}
+        <div class="main-img py-3">
+          <img src="../images/cinemaBackground.png" id="current" alt="" />
+        </div>
+        <div class="imgs">
+          <img src="../images/cinemaBackground.png" alt="" />
+          <img src="../images/actorStock.jpg" alt="" />
+          <img src="../images/background_image7.jpg" alt="" />
+          <img src="../images/FBicon.png" alt="" />
+          <img src="../images/instaIcon.png" alt="" />
+          <img src="../images/movie_stock.jpg" alt="" />
+          <img src="../images/movieHubLogo.png" alt="" />
+          <img src="../images/profilePicture.jpg" alt="" />
+        </div>
+        {{else}}
+          <div class="main-img py-3">
+            <img src="{{images.[0]}}" id="current" alt="" />
+          </div>
+          <div class="imgs">
+            {{#each images}}
+              <img src="{{this}}" alt="" />
+            {{/each}}          
+          </div>
+        {{/if}}
+      </div>
+
+      <h2 class="title text-left mt-4"><strong>Comments</strong></h2>
+      {{#if areThereComments}}
+        {{#each comments}}  
+          <div class="comment p-4 border-top border-bottom text-light">
+            <div class="row">
+              <div class="col-2 text-center border-right">
+                <h5>{{this.username}}</h5>
+                <img
+                  class=""
+                  style="width: 60px;"
+                  src="..{{this.profile_picture}}"
+                  alt=""
+                />
+              </div>
+              <div class="col-10 text-left">
+                <span class="rating text-warning" rating="{{this.rating}}">
+                  
+                </span>
+                <br />
+                <p>{{this.content}}</p>
+                <span class="float-right">
+                  <span class="plusSign text-warning" style="display: none;">+</span><span  data-id="{{this.id}}" class="likeCount text-warning">{{this.likes}}</span>
+                  {{#if ../loggedIn}}
+                    {{#if this.liked}}
+                      <i onclick="myFunction(this)" class="fa fa-thumbs-up text-warning unclickable"></i>
+                    {{else}}
+                      <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+                    {{/if}}
+                      
+                  {{/if}}
+                  <i>{{this.date_added}}</i>
+                </span>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      {{else}}
+        <p>There are no comments yet</p>
+      {{/if}}
+  
+
+    {{#if loggedIn}}
+      <span id="userPic" style="display: none;">{{profile_picture}}</span>
+      <h2 class="title text-left mt-4"><strong>Leave your comment here:
+        </strong></h2>
+      <div class="card card-signin text-light">
+        <div class="card-body">
+          <h5 class="card-title text-left">Comment</h5>
+          <form id="commentForm" class="form-signin text-left">
+            <div class="form-label-group">
+              <h2>Logged in as: <b id="comUser">{{username}}</b></h2>
+              <span class="float-right"><span style="font-size: large;">Rate the
+                  movie:
+                </span>
+                <span id="starRating" class="star-rated">
+                  <span id="spanstar-ratedFirst" title="5">☆</span>
+                  <span id="spanstar-ratedsecond" title="4">☆</span>
+                  <span id="spanstar-ratedthird" title="3">☆</span>
+                  <span id="spanstar-ratedFourth" title="2">☆</span>
+                  <span id="spanstar-ratedFifth" title="1">☆</span>
+                </span>
+              </span>
+
+
+            </div>
+
+            <div class="form-label-group">
+              <textarea
+                id="content"
+                maxlength="1000"
+                class="form-control opinion"
+                placeholder="Your opinion"
+                required
+                name="content"
+                cols="101"
+                rows="6"
+              ></textarea>              
+              <span>Characters left: <label id="symCount" for="content"></label></span>
+            </div>
+
+            <button
+              class="btn btn-outline-light text-uppercase custom-button mt-3"
+              type="submit"
+            >
+              Comment
+            </button>
+            <h6 class="text-center text-danger" id="CommentError"></h6>
+            <div class="hr-or"></div>
+
+          </form>
+        </div>
+      </div>
+    {{/if}}  
+    </div>
+
+  </div>
+
+</main>

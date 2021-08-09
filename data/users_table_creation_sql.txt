@@ -1,0 +1,12 @@
+CREATE TABLE public.users
+(
+    id SERIAL,
+    username text,
+    email text,
+    profile_picture text,
+    password text,
+    PRIMARY KEY (id)
+);
+
+ALTER TABLE public.users
+    OWNER to postgres;

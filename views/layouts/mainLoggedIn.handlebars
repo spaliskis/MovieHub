@@ -1,0 +1,233 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movie Review Site</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  {{! <link rel="stylesheet" href="/styles/style.css"/> }}
+  <link rel="stylesheet" href="/styles/NavFootStyle.css" />
+  {{#each css}}
+    <link rel="stylesheet" href="/styles/{{this}}" />
+  {{/each}}
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-inverse sticky-top navbar-custom"
+    >
+      <button
+        class="navbar-toggler navbar-dark"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="/"><img
+            id="movieHubLogo"
+            src="/images/movieHubLogo.png"
+            alt="logo"
+          /></a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutus">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categories</a>
+            <ul class="bg-dark">
+              <li><a href="/comedy">Comedy</a></li>
+              <li><a href="/horror">Horror</a></li>
+              <li><a href="/drama">Drama</a></li>
+              <li><a href="/romantic">Romantic</a></li>
+              <li><a href="/fantasy">Fantasy</a></li>
+              <li><a href="/documentary">Documentary</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mostpopular">Most popular</a>
+          </li>
+          <li class="nav-item" style="display:inline-block">
+            <a class="nav-link" href="/user"> Profile </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/logout">Log out</a>
+          </li>
+        </ul>
+
+        <form class="form-inline mx-2 my-lg-0" action="/search" method="GET">
+          <input
+            class="form-control mr-sm-2"
+            id="searchInput"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            name="query"
+          />
+          <button
+            class="btn btn-outline-success my-4 my-sm-0 custom-button"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    {{{body}}}
+
+    <footer class="text-center text-white custom-footer">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <a
+            class="btn btn-outline-secondary btn-floating m-1 customSocialButtonClass"
+            href="#!"
+            role="button"
+          ><img class="sicon" src="/images/FBicon.png" alt="FBicon" /></a>
+
+          <a
+            class="btn btn-outline-secondary btn-floating m-1 customSocialButtonClass"
+            href="#!"
+            role="button"
+          ><img class="sicon" src="/images/instaIcon.png" alt="instaIcon" /></a>
+
+          <a
+            class="btn btn-outline-secondary btn-floating m-1 customSocialButtonClass"
+            href="#!"
+            role="button"
+          ><img class="sicon" src="/images/twitterIcon.png" alt="twitterIcon" /></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input
+                    type="email"
+                    name = "email"
+                    id="form5Example2"
+                    class="form-control"
+                    placeholder="youremail@mail.com"
+                  />
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button
+                  type="submit"
+                  class="btn btn-outline-light mb-4 custom-button"
+                >
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            distinctio earum repellat quaerat voluptatibus placeat nam, commodi
+            optio pariatur est quia magnam eum harum corrupti dicta, aliquam
+            sequi voluptate quas.
+          </p>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5><a class="aFoot" href="/">Home</a></h5>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5>
+                <a class="aFoot" href="/aboutus">About us</a>
+              </h5>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5>
+                <a class="aFoot" href="/categories">Categories</a>
+              </h5>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5>
+                <a class="aFoot" href="/mostpopular">Most popular</a>
+              </h5>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+    </footer>
+    {{#each js}}
+      <script src="../js/{{this}}"></script>
+    {{/each}}
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+</html>

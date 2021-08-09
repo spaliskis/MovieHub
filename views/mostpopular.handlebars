@@ -1,0 +1,38 @@
+<!-- JS file goes here -->
+<div onload="onPageLoad()">
+
+  <!-- Most popular content here -->
+
+  <div class="container">
+    <header id="mainHeader"></header>
+
+    <main>
+      <section>
+        <h2 style="color: black">Most Popular Movies</h2>
+        <div class="row justify-content-between">
+
+          {{#each data}}
+            <article class="card col-md-4 col-xs-6 card-color">
+              <img
+                class="card-img-top image"
+                src="/images/movie_stock.jpg"
+                alt=""
+              />
+              <div class="card-body">
+                <h2 class="card-title">{{this.title}}</h2>
+                <p class="card-text">{{this.description}}</p>
+                <p class="score">★★★☆☆</p>
+                <p class="card-text">Release date: {{this.release_year}}</p>
+                <a href="movie/{{this.show_id}}" class="btn btn-primary">Read more</a>
+              </div>
+            </article>
+          {{/each}}
+
+        </div>
+        <hr />
+      </section>
+    </main>
+  </div>
+
+</div>
+<!-- Most popular content ends here -->

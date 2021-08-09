@@ -1,0 +1,23 @@
+CREATE TABLE public.movietable
+(
+    show_id integer NOT NULL,
+    type text COLLATE pg_catalog."default",
+    title text COLLATE pg_catalog."default",
+    director text COLLATE pg_catalog."default",
+    movie_cast text COLLATE pg_catalog."default",
+    country text COLLATE pg_catalog."default",
+    date_added date,
+    release_year integer,
+    rating text COLLATE pg_catalog."default",
+    duration text COLLATE pg_catalog."default",
+    listed_in text COLLATE pg_catalog."default",
+    description text COLLATE pg_catalog."default",
+	audRating float,
+    images text COLLATE pg_catalog."default",
+    CONSTRAINT movietable_pkey PRIMARY KEY (show_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.movietable
+    OWNER to postgres;

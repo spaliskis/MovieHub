@@ -1,0 +1,146 @@
+body {
+    background-color: rgb(190, 195, 205); 
+  }
+
+.custom-saveChanges-button {
+    color: black;
+    background-color: white !important;
+    border: 2px solid #deb522; 
+  }
+  
+.custom-saveChanges-button:hover {
+    background-color: #deb522 !important;
+    color: white !important;
+    border-color: #deb522 !important;
+    box-shadow: none !important;
+    border: 2px solid #deb522 !important;
+  }
+
+.wrapper {
+    padding: 30px 50px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    margin: 10px auto;
+    max-width: 600px
+}
+
+h4 {
+    letter-spacing: -1px;
+    font-weight: 400
+}
+
+.img {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    object-fit: cover
+}
+
+#img-section p,
+#deactivate p {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 10px;
+    text-align: justify
+}
+
+label {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #777;
+    padding-left: 3px
+}
+
+.form-control {
+    border-radius: 10px
+}
+
+input[placeholder] {
+    font-weight: 500
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1.5px solid #0779e4
+}
+
+select {
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    height: 40px;
+    padding: 5px 10px
+}
+
+select:focus {
+    outline: none
+}
+
+.btn-primary {
+    background-color: #0779e4
+}
+
+.danger {
+    background-color: #fff;
+    color: #e20404;
+    border: 1px solid #ddd
+}
+
+.danger:hover {
+    background-color: #e20404;
+    color: #fff
+}
+
+@media(max-width:576px) {
+    .wrapper {
+        padding: 25px 20px
+    }
+
+    #deactivate {
+        line-height: 18px
+    }
+}
+
+.custom-user-button {
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid #deb522;
+}
+
+.custom-user-button:hover{
+background-color: #deb522 !important;
+color: #0c0b00 !important;
+border-color: #deb522 !important;
+box-shadow: none !important;
+}
+
+input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    left: 8px;
+    font-size: 17px;
+    color: #b8b8b8;
+  }
+  
+.button-wrap {
+position: relative;
+}
+
+.button {
+display: inline-block;
+/* padding: 12px 18px; */
+color: black;
+background-color: transparent;
+background-image: none;
+border: 2px solid #deb522;
+}
+
+.button:hover{
+    background-color: #deb522 !important;
+    color: #0c0b00 !important;
+    border-color: #deb522 !important;
+    box-shadow: none !important;
+}

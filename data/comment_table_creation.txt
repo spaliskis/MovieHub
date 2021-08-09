@@ -1,0 +1,16 @@
+CREATE TABLE public.comments
+(
+    id SERIAL,
+    movie_id integer,
+    username text,
+    content text,
+    profile_picture text,
+    date_added text,
+    likes integer,
+    likes_users text,
+    rating integer,
+    PRIMARY KEY (id)
+);
+
+ALTER TABLE public.comments
+    OWNER to postgres;

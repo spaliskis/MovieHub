@@ -1,0 +1,118 @@
+.navbar-custom {
+  background-color: #0c0b00;
+}
+
+.read-more-button {
+  background-color: #deb522;
+  color: black;
+  border: 2px solid black;
+}
+
+.read-more-button:hover {
+  background-color: black !important;
+  border-color: #deb522 !important;
+  box-shadow: none !important;
+}
+
+.custom-button {
+  color: white;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #deb522; 
+}
+
+.custom-button:hover,
+.custom-button:active,
+.custom-button:focus,
+.custom-button:active,
+.custom-button:visited,
+.custom-button:link {
+  background-color: #deb522 !important;
+  color: #0c0b00 !important;
+  border-color: #deb522 !important;
+  box-shadow: none !important;
+}
+
+.nav-item ul {
+  position: absolute;
+  width: 105px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* display: block; */
+  /* background-color: black; */
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.nav-item:hover ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-item ul li {
+  display: block;
+  text-align: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: #0c0b00;
+  /* position: relative; */
+  /* display: none; */
+}
+
+.nav-item ul li a {
+  color: white;
+  /* text-transform: uppercase; */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  font-size: small;
+  text-decoration: none;
+}
+
+.nav-item ul li a:hover {
+  color: rgb(145, 145, 145);
+  transition-duration: 0.5s;
+}
+
+.nav-item ul li:hover {
+  background-color: #0c0b00;
+}
+
+.custom-footer {
+  background-color: black;
+}
+
+.customSocialButtonClass {
+  border: transparent;
+}
+
+.nav-link,
+.aFoot {
+  color: white;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  /* letter-spacing: 4px; */
+}
+
+.nav-link:hover,
+.aFoot:hover {
+  color: rgb(145, 145, 145);
+  transition-duration: 0.5s;
+  text-decoration: none;
+}
+
+.sicon {
+  width: 40px;
+  vertical-align: top;
+}
+
+#movieHubLogo {
+  width: 90px;
+  height: 60px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}

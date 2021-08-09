@@ -1,0 +1,33 @@
+body {
+  background-color: rgb(190, 195, 205); 
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(235, 224, 224);
+  margin: 0;
+  font-family: AmazonEmberRegular;
+  letter-spacing: 1px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 4px rgb(235, 224, 224) solid;
+}
+
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition-duration: 0.5s;
+}
+
+.list-group-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 4px rgb(235, 224, 224) solid;
+}
+
+@font-face {
+  font-family: "AmazonEmberRegular";
+  src: URL("../fonts/Ember/AmazonEmber_Rg.ttf") format("truetype");
+}
+
+

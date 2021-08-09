@@ -1,0 +1,166 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: 0.75rem;
+}
+body {
+  background-image: url("../images/background_image7.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(235, 224, 224);
+  margin: 0;
+  font-family: AmazonEmberRegular;
+  letter-spacing: 1px;
+}
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 0.25rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: auto;
+  border-radius: 2rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.card-title {
+  color: black;
+}
+
+.custom-control-label {
+  color: black;
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+article:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-duration: 0.5s;
+}
+
+.image {
+  width: 100%;
+}
+
+#featuredImg {
+  width: 50%;
+}
+
+div.hr-or {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  color: black;
+  border-top: 1px solid rgb(222, 226, 230);
+  text-align: center;
+  height: 0px;
+  line-height: 0px;
+}
+
+div.hr-or:before {
+  content: "OR";
+  background-color: #fff;
+}
+
+.customFormButton {
+  color: black;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #deb522;
+  border-radius: 8px;
+}
+
+.customFormButton:hover {
+  background-color: #deb522;
+  color: #0c0b00;
+  border-color: #deb522;
+}
+
+.customFormInputClass {
+  border-radius: 0.25rem;
+  color: black;
+}
+
+@font-face {
+  font-family: "AmazonEmberRegular";
+  src: URL("../fonts/Ember/AmazonEmber_Rg.ttf") format("truetype");
+}
